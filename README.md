@@ -91,4 +91,5 @@ GCC ARM 工具链
 使用 ST-Link Utility 或 CubeProgrammer 下载至开发板。
 
 完整展示
-![91641ca5e62de702f843554c74120ecd](https://github.com/user-attachments/assets/c74769fd-f41b-4cfd-83a7-e0ad8caebd6e)
+![91641ca5e62de702f843554c74120ecd](https://github.com/user-attachments/assets/1355c7b9-64da-44f6-95b4-403c7d483a5b)
+
