@@ -70,7 +70,7 @@ stm32f103c8-project/
 static const char *weather_uri = "https://api.seniverse.com/v3/weather/now.json?key=YOUR_KEY&location=shanghai&language=zh-Hans&unit=c";
 
 
-🧩 编译与下载
+##🧩 编译与下载
 
 开发环境：
 
@@ -90,6 +90,6 @@ GCC ARM 工具链
 
 使用 ST-Link Utility 或 CubeProgrammer 下载至开发板。
 
-完整展示
+##完整展示
 ![91641ca5e62de702f843554c74120ecd](https://github.com/user-attachments/assets/1355c7b9-64da-44f6-95b4-403c7d483a5b)
 
