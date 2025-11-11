@@ -67,6 +67,8 @@ stm32f103c8-project/
 
 ## 📸 效果展示
 
-![时钟正面] <img src="images/clock_front.jpg" width="250"/>
+| 界面 | 示例 |
+|------|------|
+| ⏰ 时钟界面 | <img src="images/cfigure.jpg" width="250"/> |
 
 
