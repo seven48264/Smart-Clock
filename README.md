@@ -69,6 +69,6 @@ stm32f103c8-project/
 
 | 界面 | 示例 |
 |------|------|
-| ⏰ 时钟界面 | <img src="images/cfigure.jpg" width="250"/> |
+| ⏰ 时钟界面 | <img src="images/figure.jpg" width="250"/> |
 
 
