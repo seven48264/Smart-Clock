@@ -1,74 +1,225 @@
-# 🌤️ Smart Clock - STM32 智能天气时钟
+| ESP32-C3 (AT mode) | Get network weather data over WiFi |
+| DS1302 / RTC | Provide real-time clock |
+| NTC Thermistor | Temperature Acquisition |
+| MPU6050 | Accelerometer sensor for attitude detection or interface switching |
+| DuPont Cable / Power Module | Hardware Connectivity & Power |
 
-本项目是一个基于 **STM32F103C8T6** 的嵌入式智能天气时钟系统，集成了 **RTC 实时时钟显示、WiFi 联网天气获取、温湿度传感器检测、加速度感应切换界面** 等功能，展示效果清晰美观，可作为嵌入式综合实践或毕业设计项目。
 
----
 
-## 📦 项目简介
-
-Smart Clock 通过 STM32 单片机驱动 **ST7735 彩色 LCD 屏幕**，实时显示时间、日期、天气和温湿度信息。  
-系统通过 **ESP32-C3 模块** 连接互联网，从心知天气（Seniverse API）获取最新天气数据，并在屏幕上动态展示。
 
 ---
 
-## ⚙️ 硬件组成
 
-| 模块名称 | 功能描述 |
-|-----------|-----------|
-| STM32F103C8T6 | 主控芯片，负责逻辑与显示控制 |
-| ST7735 1.77" LCD | 显示时间、日期、天气等信息 |
-| ESP32-C3 (AT模式) | 通过 WiFi 获取网络天气数据 |
-| DS1302 / RTC | 提供实时时钟 |
-| NTC 热敏电阻 | 温度采集 |
-| MPU6050 | 加速度传感器，用于姿态检测或界面切换 |
-| 杜邦线 / 电源模块 | 硬件连接与供电 |
 
----
 
-## 🧠 软件结构
+## 🧠 Software Structure
 
-项目采用分层设计，驱动层与应用层分离，代码结构清晰、可维护性强。
+
+
+
+The project adopts a hierarchical design, separating the driver layer from the application layer, and the code structure is clear and maintainable.
+
+
+
+
+
+
 
 
 stm32f103c8-project/
-├── app/ # 应用层逻辑
+├── app/ # Application layer logic
 │ ├── main.c
 │ ├── weather.c
 │ ├── rtc.c
 │ ├── mpu6050.c
 │ └── led.c
-├── drivers/ # 底层驱动层
+├── drivers/ # The underlying driver layer
 │ ├── st7735.c
 │ ├── lcd_spi.c
 │ ├── esp_at.c
 │ └── delay.c
-├── fonts/ # 字库与字体绘制
-├── images/ # 图片资源
-├── inc/ # 头文件
-├── utils/ # 工具函数
+├── fonts/ # Font library and font drawing
+├── images/ # Image resources
+├── inc/ # header file
+├── utils/ # Tool functions
 └── main.h
 
 
----
 
-## 🛰️ 功能特性
 
-✅ 实时时钟显示（年月日时分秒）  
-✅ 通过 WiFi 获取实时天气（温度、天气状态）  
-✅ 自动切换 °C 单位显示  
-✅ 加速度检测触发界面变化  
-✅ 液晶屏动态刷新、自适应显示布局  
-✅ 断电保存时间数据  
-✅ 模块化驱动、结构清晰
+
 
 
 
 ---
 
-## 📸 效果展示
 
-| 界面 | 示例 |
+
+
+## 🛰️ Functional features
+
+
+
+
+✅ Real-time clock display (year, month, day, hour, minute, second)  
+✅ Get real-time weather (temperature, weather status) via WiFi  
+✅ Automatically switches the °C unit display  
+✅ Acceleration detection triggers interface changes  
+✅ LCD screen dynamic refresh and adaptive display layout  
+✅ Power off time data is saved  
+✅ Modular drive and clear structure
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+## 📸 Effect display
+
+
+
+
+| Interface | Example |
 |------|------|
-| ⏰ 时钟界面 | <img src="images/figure.jpg" width="250"/> |
+| ⏰ Clock Interface | <img src="images/figure.jpg" width="250"/> |
 
 
+
+
+---
+
+
+
+
+## Wiring
+
+
+
+
+STM32:PA2->ESP32:IO6
+STM32:PA3->ESP32:IO7
+STM32:GND->ESP32:GND  ST7735:GND| ESP32-C3 (AT mode) | Get network weather data over WiFi |
+| DS1302 / RTC | Provide real-time clock |
+| NTC Thermistor | Temperature Acquisition |
+| MPU6050 | Accelerometer sensor for attitude detection or interface switching |
+| DuPont Cable / Power Module | Hardware Connectivity & Power |
+
+
+
+
+---
+
+
+
+
+## 🧠 Software Structure
+
+
+
+
+The project adopts a hierarchical design, separating the driver layer from the application layer, and the code structure is clear and maintainable.
+
+
+
+
+
+
+
+
+stm32f103c8-project/
+├── app/ # Application layer logic
+│ ├── main.c
+│ ├── weather.c
+│ ├── rtc.c
+│ ├── mpu6050.c
+│ └── led.c
+├── drivers/ # The underlying driver layer
+│ ├── st7735.c
+│ ├── lcd_spi.c
+│ ├── esp_at.c
+│ └── delay.c
+├── fonts/ # Font library and font drawing
+├── images/ # Image resources
+├── inc/ # header file
+├── utils/ # Tool functions
+└── main.h
+
+
+
+
+
+
+
+
+---
+
+
+
+
+## 🛰️ Functional features
+
+
+
+
+✅ Real-time clock display (year, month, day, hour, minute, second)  
+✅ Get real-time weather (temperature, weather status) via WiFi  
+✅ Automatically switches the °C unit display  
+✅ Acceleration detection triggers interface changes  
+✅ LCD screen dynamic refresh and adaptive display layout  
+✅ Power off time data is saved  
+✅ Modular drive and clear structure
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+## 📸 Effect display
+
+
+
+
+| Interface | Example |
+|------|------|
+| ⏰ Clock Interface | <img src="images/figure.jpg" width="250"/> |
+
+
+
+
+---
+
+
+
+
+## Wiring
+
+
+
+
+STM32:PA2->ESP32:IO6
+STM32:PA3->ESP32:IO7
+STM32:GND->ESP32:GND  ST7735:GND  MPU6050:GND
+STM32:PA4 PA5 PA7 PB0 PB1 ->CS RST SDA SCK DC
+STM32:PB6 PB7 -> MPU6050:SCL SDA
