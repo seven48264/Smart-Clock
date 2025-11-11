@@ -61,35 +61,4 @@ stm32f103c8-project/
 ✅ 断电保存时间数据  
 ✅ 模块化驱动、结构清晰
 
----
-
-## 🌐 天气 API 配置
-
-在 `weather.c` 中配置天气 API：
-```c
-static const char *weather_uri = "https://api.seniverse.com/v3/weather/now.json?key=YOUR_KEY&location=shanghai&language=zh-Hans&unit=c";
-
-
-##🧩 编译与下载
-
-开发环境：
-
-Keil µVision 5 或 STM32CubeIDE
-
-GCC ARM 工具链
-
-连接 ST-Link / J-Link 烧录器
-
-编译步骤：
-
-打开 project.uvprojx 或 Makefile 工程；
-
-选择目标芯片 STM32F103C8；
-
-编译生成 .hex 文件；
-
-使用 ST-Link Utility 或 CubeProgrammer 下载至开发板。
-
-##完整展示
-![91641ca5e62de702f843554c74120ecd](https://github.com/user-attachments/assets/1355c7b9-64da-44f6-95b4-403c7d483a5b)
 
