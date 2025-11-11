@@ -67,6 +67,6 @@ stm32f103c8-project/
 
 ## 📸 效果展示
 
-![时钟正面](images/figure.jpg)
+![时钟正面] <img src="images/clock_front.jpg" width="250"/>
 
 
