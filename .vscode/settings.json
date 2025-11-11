@@ -1,0 +1,12 @@
+"github.copilot.enable": {
+    "*": true,              // 普通代码启用
+    "plaintext": false,     // 不在纯文本文件启用
+    "markdown": false,      // 不在 markdown 文件启用
+    "scminput": false,      // 不在提交信息里启用
+    "c": true,              // 仍然可以在 C 文件启用
+    "cpp": true
+},
+"github.copilot.advanced": {
+    "inlineSuggest.enableCode": true,
+    "inlineSuggest.enableComments": false  // ⛔ 禁止生成注释！
+}
