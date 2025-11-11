@@ -71,3 +71,4 @@ stm32f103c8-project/
 |------|------|
 | ⏰ 时钟界面 | <img src="images/figure.jpg" width="250"/> |
 
+STM32:PA2->ESP32:IO6 STM32:PA3->ESP32:IO7 STM32:GND->ESP32:GND ST7735:GND MPU6050:GND STM32:PA4 PA5 PA7 PB0 PB1 ->CS RST SDA SCK DC STM32:PB6 PB7 -> MPU6050:SCL SDA
